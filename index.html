@@ -1,42 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Send USDT (BEP20)</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <title>USDT Transfer DApp</title>
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+  <script defer src="script.js"></script>
   <style>
-    body {
-      font-family: Arial;
-      padding: 20px;
-      background: #f9f9f9;
-    }
-    h2 {
-      color: #222;
-    }
+    body { font-family: Arial, sans-serif; padding: 20px; }
     input, button {
-      display: block;
-      margin-top: 10px;
-      padding: 10px;
-      width: 100%;
-      max-width: 400px;
-    }
-    button {
-      background-color: #28a745;
-      color: white;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
+      padding: 10px; margin: 10px 0;
+      width: 100%; max-width: 400px; font-size: 16px;
     }
   </style>
 </head>
-<body onload="connectWallet()">
-  <h2>Send BEP20 USDT</h2>
-  <p id="wallet-address">Connecting...</p>
-
-  <input type="text" id="recipient" placeholder="Enter recipient wallet address">
-  <input type="number" id="amount" placeholder="Enter amount in USDT">
-  <button onclick="sendUSDT()">Send USDT</button>
-
-  <script src="script.js"></script>
+<body>
+  <h2>USDT Transfer DApp</h2>
+  <div>
+    <input type="text" id="amount" placeholder="Amount in USDT" />
+    <button onclick="sendUSDT()">🚀 Send USDT</button>
+  </div>
 </body>
 </html>
